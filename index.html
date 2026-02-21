@@ -210,17 +210,22 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
+    }
+
+    .logo span {
       font-size: 1.5rem;
       font-weight: 900;
       color: var(--color-primary);
       letter-spacing: 3px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .logo .leaf {
-      font-size: 1.2rem;
     }
 
     .nav-links {
@@ -791,8 +796,16 @@
     }
 
     .footer-brand .logo {
-      color: #ffffff;
       margin-bottom: 8px;
+    }
+
+    .footer-brand .logo span {
+      color: #ffffff;
+    }
+
+    .footer-brand .logo img {
+      height: 36px;
+      width: 36px;
     }
 
     .footer-brand p {
@@ -1003,7 +1016,7 @@
   <!-- ======== HEADER ======== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="#inicio" class="logo">FEIRA <span class="leaf">🌿</span></a>
+      <a href="#inicio" class="logo"><img src="logo-app.png" alt="Feira logo"><span>FEIRA</span></a>
 
       <nav class="nav-links">
         <a href="#inicio">Início</a>
@@ -1599,7 +1612,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo">FEIRA <span class="leaf">🌿</span></div>
+          <div class="logo"><img src="logo-app.png" alt="Feira logo"><span>FEIRA</span></div>
           <p>Conectando a cadeia agrícola</p>
         </div>
 

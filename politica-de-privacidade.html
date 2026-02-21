@@ -40,12 +40,22 @@
       gap: 16px;
     }
     .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .header-logo img {
+      height: 36px;
+      width: 36px;
+      border-radius: 8px;
+    }
+    .header-logo span {
       font-size: 18px;
       font-weight: 900;
       color: #4a6741;
       letter-spacing: 4px;
-      text-decoration: none;
-      flex-shrink: 0;
     }
     .header-logo:hover { opacity: 0.8; }
     .header-actions {
@@ -207,6 +217,16 @@
       text-align: center;
     }
     .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-logo img {
+      height: 32px;
+      width: 32px;
+      border-radius: 8px;
+    }
+    .footer-logo span {
       font-size: 16px;
       font-weight: 900;
       color: #ffffff;
@@ -245,7 +265,7 @@
   <!-- Header -->
   <header class="header">
     <div class="header-inner">
-      <a href="index.html" class="header-logo">FEIRA</a>
+      <a href="index.html" class="header-logo"><img src="logo-app.png" alt="Feira logo"><span>FEIRA</span></a>
       <div class="header-actions">
         <a href="index.html" class="header-link">Início</a>
         <a href="https://play.google.com/store/apps/details?id=com.stallonemurta.market" target="_blank" rel="noopener" class="btn-download">Baixar App</a>
@@ -488,7 +508,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-logo">FEIRA</div>
+      <div class="footer-logo"><img src="logo-app.png" alt="Feira logo"><span>FEIRA</span></div>
       <nav class="footer-links">
         <a href="termos-de-servico.html">Termos de Serviço</a>
         <a href="politica-de-privacidade.html" class="active">Política de Privacidade</a>

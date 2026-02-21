@@ -19,8 +19,9 @@
   <meta property="og:image:alt" content="Feira - Mercado Agrícola Digital">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo-app.png">
-  <link rel="apple-touch-icon" href="logo-app.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="logo-app.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo-app.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo-app.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -398,14 +399,22 @@
     .hero-content {
       position: relative;
       z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 48px;
     }
 
     .hero-logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 28px;
-      margin: 0 auto 32px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 0 4px rgba(255, 255, 255, 0.15);
+      width: 260px;
+      min-width: 260px;
+      height: 260px;
+      border-radius: 56px;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3), 0 0 0 5px rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+    }
+
+    .hero-text {
+      text-align: left;
     }
 
     .hero h1 {
@@ -413,7 +422,7 @@
       font-weight: 900;
       color: #ffffff;
       max-width: 700px;
-      margin: 0 auto 20px;
+      margin: 0 0 20px;
       line-height: 1.15;
     }
 
@@ -421,14 +430,14 @@
       font-size: 1.2rem;
       color: rgba(255, 255, 255, 0.9);
       max-width: 600px;
-      margin: 0 auto 40px;
+      margin: 0 0 40px;
       line-height: 1.6;
     }
 
     .hero-buttons {
       display: flex;
       gap: 16px;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
     }
 
@@ -830,9 +839,9 @@
     }
 
     .footer-brand .logo img {
-      height: 80px;
-      width: 80px;
-      border-radius: 16px;
+      height: 200px;
+      width: 200px;
+      border-radius: 40px;
     }
 
     .footer-brand p {
@@ -1002,11 +1011,21 @@
         padding: 64px 0 80px;
       }
 
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+      }
+
       .hero-logo {
-        width: 90px;
-        height: 90px;
-        border-radius: 22px;
-        margin-bottom: 24px;
+        width: 160px;
+        min-width: 160px;
+        height: 160px;
+        border-radius: 36px;
+      }
+
+      .hero-text {
+        text-align: center;
       }
 
       .hero h1 {
@@ -1020,6 +1039,7 @@
       .hero-buttons {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
       }
 
       .hero-buttons .btn {
@@ -1095,15 +1115,17 @@
   <section class="hero" id="inicio">
     <div class="container hero-content">
       <img src="logo-app.png" alt="Feira" class="hero-logo fade-in">
-      <h1 class="fade-in">Conectando quem produz, quem distribui e quem vende</h1>
-      <p class="fade-in">Feira é a plataforma que une produtores rurais, distribuidoras e lojistas em um mercado agrícola digital. Tudo em um só app.</p>
-      <div class="hero-buttons fade-in">
-        <a href="https://play.google.com/store/apps/details?id=com.stallonemurta.market"
-           target="_blank" rel="noopener"
-           class="btn btn-primary">
-          Baixar na Google Play
-        </a>
-        <a href="#como-funciona" class="btn btn-outline">Saiba mais</a>
+      <div class="hero-text">
+        <h1 class="fade-in">Conectando quem produz, quem distribui e quem vende</h1>
+        <p class="fade-in">Feira é a plataforma que une produtores rurais, distribuidoras e lojistas em um mercado agrícola digital. Tudo em um só app.</p>
+        <div class="hero-buttons fade-in">
+          <a href="https://play.google.com/store/apps/details?id=com.stallonemurta.market"
+             target="_blank" rel="noopener"
+             class="btn btn-primary">
+            Baixar na Google Play
+          </a>
+          <a href="#como-funciona" class="btn btn-outline">Saiba mais</a>
+        </div>
       </div>
     </div>
   </section>

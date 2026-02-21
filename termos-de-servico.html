@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Serviço — Feira</title>
+  <meta name="description" content="Termos de Serviço da plataforma Feira — Mercado Agrícola Digital">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f5f3e8;
+      color: #2d3436;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #ffffff;
+      border-bottom: 2px solid #4a6741;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo {
+      font-size: 18px;
+      font-weight: 900;
+      color: #4a6741;
+      letter-spacing: 4px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .header-logo:hover { opacity: 0.8; }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4a6741;
+      text-decoration: none;
+    }
+    .header-link:hover { text-decoration: underline; }
+    .btn-download {
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: #4a6741;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .btn-download:hover { opacity: 0.85; }
+
+    /* ── Content ── */
+    .content-wrapper {
+      flex: 1;
+      padding: 40px 24px 60px;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    @media (max-width: 600px) {
+      .content { padding: 32px 20px; }
+    }
+
+    /* ── Typography ── */
+    .doc-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #4a6741;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .doc-version {
+      font-size: 14px;
+      font-weight: 500;
+      color: #636e72;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #2d3436;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f5f3e8;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2d3436;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 12px;
+      color: #2d3436;
+    }
+    ul, ol {
+      margin-bottom: 12px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .highlight {
+      background: #f5f3e8;
+      border-left: 4px solid #4a6741;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-weight: 500;
+    }
+    .contact-box {
+      background: #f5f3e8;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .contact-box p { color: #636e72; margin-bottom: 8px; }
+    .contact-box a {
+      color: #4a6741;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Responsive table ── */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 480px;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid #e0e0e0;
+    }
+    th {
+      background: #4a6741;
+      color: #fff;
+      font-weight: 700;
+    }
+    td { background: #fff; }
+    tr:nth-child(even) td { background: #f9f9f9; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #2d3436;
+      color: #b2bec3;
+      padding: 40px 24px;
+      font-size: 14px;
+    }
+    .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 4px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+    }
+    .footer-links a {
+      color: #b2bec3;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #ffffff; }
+    .footer-links a.active {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .footer-email a {
+      color: #dfe6e9;
+      text-decoration: none;
+    }
+    .footer-email a:hover { text-decoration: underline; }
+    .footer-copy {
+      font-size: 12px;
+      color: #636e72;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">FEIRA</a>
+      <div class="header-actions">
+        <a href="index.html" class="header-link">Início</a>
+        <a href="https://play.google.com/store/apps/details?id=com.stallonemurta.market" target="_blank" rel="noopener" class="btn-download">Baixar App</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="content-wrapper">
+    <article class="content">
+
+      <h1 class="doc-title">Termos de Serviço da Plataforma Feira</h1>
+      <p class="doc-version">Versão 1.0 — 19 de fevereiro de 2026</p>
+
+      <!-- 1 -->
+      <h2>1. Apresentação</h2>
+      <p><strong>1.1.</strong> Os presentes Termos de Serviço ("<strong>Termos</strong>") regulamentam as condições de uso da plataforma digital FEIRA ("<strong>Plataforma</strong>" ou "<strong>Aplicativo</strong>").</p>
+      <p><strong>1.2.</strong> Estes Termos complementam e integram o <a href="contrato-de-usuario.html">Contrato de Usuário</a> e a <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+      <p><strong>1.3.</strong> Ao acessar ou utilizar a Plataforma, o Usuário manifesta sua concordância plena com estes Termos.</p>
+
+      <!-- 2 -->
+      <h2>2. Descrição dos Serviços</h2>
+      <p><strong>2.1.</strong> A Plataforma oferece serviços de intermediação digital no segmento agrícola:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Funcionalidades</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Marketplace de Produtos Agrícolas</strong></td>
+              <td>Catálogo, busca, pedidos, estoque, descontos</td>
+            </tr>
+            <tr>
+              <td><strong>Gestão Financeira</strong></td>
+              <td>Faturamento, recibos, extratos, relatórios, PIX</td>
+            </tr>
+            <tr>
+              <td><strong>Ferramentas Operacionais</strong></td>
+              <td>Rotas, frota, distâncias, logística</td>
+            </tr>
+            <tr>
+              <td><strong>Comunicação</strong></td>
+              <td>Chat, mensagens automáticas, push, comunidades, avaliações</td>
+            </tr>
+            <tr>
+              <td><strong>Suporte</strong></td>
+              <td>Denúncias, indicações, listas de compras, tutoriais</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3 -->
+      <h2>3. Natureza da Intermediação</h2>
+      <div class="highlight">
+        A Plataforma atua exclusivamente como <strong>intermediadora tecnológica</strong>. NÃO produz, armazena, transporta, inspeciona, define preços, garante transações ou emprega usuários.
+      </div>
+
+      <!-- 4 -->
+      <h2>4. Condições de Acesso e Uso</h2>
+      <h3>4.1. Requisitos</h3>
+      <ul>
+        <li>Idade mínima de 18 (dezoito) anos</li>
+        <li>Pessoa jurídica regularmente constituída</li>
+        <li>Dispositivo compatível com o Aplicativo</li>
+        <li>Acesso à internet</li>
+      </ul>
+      <h3>4.2. Condutas Proibidas</h3>
+      <ul>
+        <li>Comercialização de produtos ilegais</li>
+        <li>Prática de preços abusivos</li>
+        <li>Realização de transações fictícias</li>
+        <li>Espionagem comercial</li>
+        <li>Ataques à infraestrutura da Plataforma</li>
+        <li>Uso de identidade falsa</li>
+      </ul>
+
+      <!-- 5 -->
+      <h2>5. Produtos Agrícolas</h2>
+      <p>A responsabilidade pelos produtos comercializados é integralmente dos Usuários. Todos os produtos devem atender às normas da <strong>ANVISA</strong>, <strong>MAPA</strong> e legislação de segurança alimentar vigente. Produtos orgânicos exigem certificação válida e comprovável.</p>
+
+      <!-- 6 -->
+      <h2>6. Sistema de Pedidos</h2>
+      <p><strong>Fluxo:</strong> Lojista → Distribuidor → Produtor</p>
+      <p><strong>Status do pedido:</strong></p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Aguardando</td><td>Pedido enviado, aguardando análise</td></tr>
+            <tr><td>Aprovado</td><td>Pedido aceito pelo fornecedor</td></tr>
+            <tr><td>Recusado</td><td>Pedido recusado pelo fornecedor</td></tr>
+            <tr><td>Cancelado</td><td>Pedido cancelado por uma das partes</td></tr>
+            <tr><td>Entregue</td><td>Pedido entregue com sucesso</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 7 -->
+      <h2>7. Promoções e Descontos</h2>
+      <p>A criação e gestão de promoções e descontos é de <strong>responsabilidade exclusiva dos Usuários</strong>. Todas as promoções devem cumprir o <strong>Código de Defesa do Consumidor (CDC)</strong> e a legislação concorrencial aplicável.</p>
+
+      <!-- 8 -->
+      <h2>8. Ferramentas de Logística</h2>
+      <p>As ferramentas de logística são oferecidas no estado em que se encontram ("<em>as is</em>"). Os cálculos de rotas, distâncias e estimativas são <strong>aproximados</strong>. A Plataforma não atua como transportadora.</p>
+
+      <!-- 9 -->
+      <h2>9. Disponibilidade</h2>
+      <p>A Plataforma envidará <strong>esforços razoáveis</strong> para manter os serviços disponíveis. Manutenções programadas serão comunicadas com pelo menos <strong>24 horas</strong> de antecedência. Crédito proporcional poderá ser concedido em caso de indisponibilidade superior a <strong>72 horas</strong> por culpa exclusiva da Plataforma.</p>
+
+      <!-- 10 -->
+      <h2>10. Notificações</h2>
+      <p>As comunicações serão realizadas por meio de:</p>
+      <ul>
+        <li>Notificações push</li>
+        <li>Mensagens in-app</li>
+        <li>Chat</li>
+        <li>E-mail</li>
+        <li>WhatsApp</li>
+      </ul>
+      <p><strong>Comunicações essenciais</strong> (segurança, termos, cobranças) não podem ser desativadas pelo Usuário.</p>
+
+      <!-- 11 -->
+      <h2>11. Limitação de Garantias</h2>
+      <div class="highlight">
+        Os serviços são fornecidos "<em>as is</em>" (como estão) e "<em>as available</em>" (conforme disponibilidade), <strong>sem garantias expressas ou implícitas</strong> de qualquer natureza.
+      </div>
+
+      <!-- 12 -->
+      <h2>12. Integração com Terceiros</h2>
+      <p>A Plataforma utiliza serviços de terceiros para seu funcionamento:</p>
+      <ul>
+        <li><strong>Autenticação:</strong> Google, Apple</li>
+        <li><strong>Pagamentos:</strong> PIX</li>
+        <li><strong>Comunicação:</strong> WhatsApp</li>
+        <li><strong>Infraestrutura:</strong> Expo, Supabase, Sentry</li>
+      </ul>
+
+      <!-- 13 -->
+      <h2>13. Comunidades</h2>
+      <p>As comunidades dentro da Plataforma são <strong>moderadas</strong>. É expressamente proibido:</p>
+      <ul>
+        <li>Publicação de conteúdo que configure crime</li>
+        <li>Compartilhamento de dados pessoais de terceiros sem consentimento</li>
+        <li>Spam ou publicidade não autorizada</li>
+        <li>Disseminação de informações falsas</li>
+      </ul>
+
+      <!-- 14 -->
+      <h2>14. Anti-Lavagem de Dinheiro</h2>
+      <p>A Plataforma realiza <strong>monitoramento de transações atípicas</strong> e cooperará com as autoridades competentes conforme exigido pela legislação vigente.</p>
+
+      <!-- 15 -->
+      <h2>15. Obrigações Tributárias</h2>
+      <p>As obrigações tributárias são de <strong>responsabilidade individual de cada Usuário</strong>. A taxa de <strong>1% (um por cento)</strong> cobrada pela Plataforma constitui remuneração exclusiva pela intermediação tecnológica.</p>
+
+      <!-- 16 -->
+      <h2>16. Vigência</h2>
+      <p>Estes Termos permanecem vigentes enquanto a conta do Usuário estiver ativa. O Usuário pode cancelar sua conta a qualquer tempo, mediante solicitação pelos canais oficiais.</p>
+
+      <!-- 17 -->
+      <h2>17. Disposições Finais</h2>
+      <p>Estes Termos são regidos pela <strong>legislação brasileira</strong>. Quaisquer alterações serão comunicadas com pelo menos <strong>30 (trinta) dias</strong> de antecedência.</p>
+
+      <!-- Contato -->
+      <div class="contact-box">
+        <p>Dúvidas ou sugestões? Entre em contato:</p>
+        <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">FEIRA</div>
+      <nav class="footer-links">
+        <a href="termos-de-servico.html" class="active">Termos de Serviço</a>
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <a href="contrato-de-usuario.html">Contrato de Usuário</a>
+      </nav>
+      <div class="footer-email">
+        <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Feira — Mercado Agrícola. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

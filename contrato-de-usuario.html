@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrato de Usuário — Feira</title>
+  <meta name="description" content="Contrato de Usuário da plataforma Feira — Mercado Agrícola Digital">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f5f3e8;
+      color: #2d3436;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #ffffff;
+      border-bottom: 2px solid #4a6741;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo {
+      font-size: 18px;
+      font-weight: 900;
+      color: #4a6741;
+      letter-spacing: 4px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .header-logo:hover { opacity: 0.8; }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4a6741;
+      text-decoration: none;
+    }
+    .header-link:hover { text-decoration: underline; }
+    .btn-download {
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: #4a6741;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .btn-download:hover { opacity: 0.85; }
+
+    /* ── Content ── */
+    .content-wrapper {
+      flex: 1;
+      padding: 40px 24px 60px;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    @media (max-width: 600px) {
+      .content { padding: 32px 20px; }
+    }
+
+    /* ── Typography ── */
+    .doc-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #4a6741;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .doc-version {
+      font-size: 14px;
+      font-weight: 500;
+      color: #636e72;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #2d3436;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f5f3e8;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2d3436;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 12px;
+      color: #2d3436;
+    }
+    ul, ol {
+      margin-bottom: 12px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    a { color: #4a6741; }
+    a:hover { text-decoration: underline; }
+    .highlight {
+      background: #f5f3e8;
+      border-left: 4px solid #4a6741;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-weight: 500;
+    }
+    .contact-box {
+      background: #f5f3e8;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .contact-box p { color: #636e72; margin-bottom: 8px; }
+    .contact-box a {
+      color: #4a6741;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Preamble ── */
+    .preamble {
+      background: #f5f3e8;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .preamble p { color: #2d3436; }
+
+    /* ── Parties ── */
+    .parties {
+      background: #ffffff;
+      border: 2px solid #4a6741;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .parties p { margin-bottom: 8px; }
+
+    /* ── Responsive table ── */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 480px;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid #e0e0e0;
+    }
+    th {
+      background: #4a6741;
+      color: #fff;
+      font-weight: 700;
+    }
+    td { background: #fff; }
+    tr:nth-child(even) td { background: #f9f9f9; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #2d3436;
+      color: #b2bec3;
+      padding: 40px 24px;
+      font-size: 14px;
+    }
+    .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 4px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+    }
+    .footer-links a {
+      color: #b2bec3;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #ffffff; }
+    .footer-links a.active {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .footer-email a {
+      color: #dfe6e9;
+      text-decoration: none;
+    }
+    .footer-email a:hover { text-decoration: underline; }
+    .footer-copy {
+      font-size: 12px;
+      color: #636e72;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">FEIRA</a>
+      <div class="header-actions">
+        <a href="index.html" class="header-link">Início</a>
+        <a href="https://play.google.com/store/apps/details?id=com.stallonemurta.market" target="_blank" rel="noopener" class="btn-download">Baixar App</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="content-wrapper">
+    <article class="content">
+
+      <h1 class="doc-title">Contrato de Usuário da Plataforma Feira</h1>
+      <p class="doc-version">Versão 1.0 — 19 de fevereiro de 2026</p>
+
+      <!-- Partes -->
+      <div class="parties">
+        <p><strong>CONTRATADA:</strong> Plataforma digital FEIRA, marketplace de intermediação no segmento agrícola, doravante denominada simplesmente <strong>"PLATAFORMA"</strong> ou <strong>"FEIRA"</strong>.</p>
+        <p><strong>CONTRATANTE:</strong> A pessoa física ou jurídica que se cadastra na Plataforma, devidamente identificada por meio de CPF ou CNPJ, doravante denominada simplesmente <strong>"USUÁRIO"</strong>.</p>
+      </div>
+
+      <!-- Preâmbulo -->
+      <div class="preamble">
+        <p>O presente Contrato de Usuário ("Contrato") regula a relação jurídica entre a PLATAFORMA e o USUÁRIO, estabelecendo os direitos, deveres, obrigações e limitações de responsabilidade aplicáveis ao uso da plataforma digital FEIRA ("Aplicativo").</p>
+        <p>Ao realizar o cadastro e/ou utilizar os serviços da PLATAFORMA, o USUÁRIO declara ter lido, compreendido e concordado integralmente com todas as cláusulas deste Contrato, dos <a href="termos-de-servico.html">Termos de Serviço</a> e da <a href="politica-de-privacidade.html">Política de Privacidade</a>, que são partes integrantes e indissociáveis deste instrumento.</p>
+      </div>
+
+      <!-- Cláusula 1 -->
+      <h2>Cláusula 1ª — Definições</h2>
+      <p>Para fins deste Contrato, aplicam-se as seguintes definições:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Termo</th>
+              <th>Definição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Plataforma / Aplicativo</strong></td><td>O software, aplicativo móvel e/ou web denominado FEIRA, incluindo todas as suas funcionalidades, interfaces, APIs e sistemas relacionados</td></tr>
+            <tr><td><strong>Usuário</strong></td><td>Toda pessoa física ou jurídica cadastrada na Plataforma, independentemente de sua categoria</td></tr>
+            <tr><td><strong>Produtor</strong></td><td>Usuário cadastrado na categoria de produtor rural, responsável pela produção e oferta de produtos agrícolas</td></tr>
+            <tr><td><strong>Distribuidor</strong></td><td>Usuário cadastrado na categoria de empresa distribuidora, que adquire produtos de Produtores e os disponibiliza para Lojistas</td></tr>
+            <tr><td><strong>Lojista</strong></td><td>Usuário cadastrado na categoria de lojista/revendedor, que adquire produtos de distribuidoras para revenda ao consumidor final</td></tr>
+            <tr><td><strong>Transação</strong></td><td>Qualquer operação de compra e venda de produtos agrícolas realizada entre Usuários por intermédio da Plataforma</td></tr>
+            <tr><td><strong>Pedido</strong></td><td>Solicitação formal de aquisição de produtos registrada na Plataforma, contendo itens, quantidades, preços e condições</td></tr>
+            <tr><td><strong>Taxa da Plataforma</strong></td><td>Remuneração devida pelo Usuário à Plataforma pela intermediação, correspondente a 1% do valor bruto de cada Transação aprovada</td></tr>
+            <tr><td><strong>Fatura</strong></td><td>Documento de cobrança mensal emitido pela Plataforma referente ao somatório das Taxas acumuladas no período</td></tr>
+            <tr><td><strong>Conteúdo do Usuário</strong></td><td>Quaisquer informações, textos, imagens, dados, avaliações e demais materiais inseridos pelo Usuário na Plataforma</td></tr>
+            <tr><td><strong>Dados Pessoais</strong></td><td>Informações relacionadas a pessoa natural identificada ou identificável (art. 5º, I, LGPD)</td></tr>
+            <tr><td><strong>Comunidade</strong></td><td>Espaço virtual dentro da Plataforma destinado à interação entre Usuários sobre temas agrícolas</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Cláusula 2 -->
+      <h2>Cláusula 2ª — Objeto</h2>
+      <p><strong>2.1.</strong> O presente Contrato tem por objeto regular a prestação de serviços de intermediação digital oferecidos pela PLATAFORMA ao USUÁRIO, consistente na disponibilização de infraestrutura tecnológica que permite a conexão entre Produtores, Distribuidores e Lojistas para a realização de transações comerciais envolvendo produtos agrícolas.</p>
+
+      <div class="highlight">
+        <strong>2.2.</strong> A PLATAFORMA atua exclusivamente como <strong>intermediadora tecnológica</strong>, nos termos do art. 5º, VII, da Lei nº 12.965/2014 (Marco Civil da Internet), <strong>não sendo parte nas transações comerciais</strong> realizadas entre os Usuários.
+      </div>
+
+      <p><strong>2.3.</strong> A PLATAFORMA <strong>não produz, armazena, transporta, distribui, inspeciona ou comercializa</strong> diretamente quaisquer produtos agrícolas ofertados pelos Usuários.</p>
+
+      <p><strong>2.4.</strong> As ferramentas adicionais disponibilizadas pela Plataforma (gestão logística, cálculo de rotas, comunicação entre usuários, relatórios, métricas) são oferecidas como <strong>recursos auxiliares</strong>, sem que sua disponibilização configure participação da Plataforma nas operações comerciais dos Usuários.</p>
+
+      <h3>2.5. Independência das Relações Comerciais</h3>
+      <p>As relações comerciais entre os três níveis da cadeia (Produtor → Distribuidor → Lojista) são <strong>independentes</strong> entre si. A Plataforma opera como facilitadora tecnológica de cada relação bilateral.</p>
+
+      <h3>2.6. Ausência de Vínculo</h3>
+      <p>A utilização da Plataforma <strong>não configura</strong>, em nenhuma hipótese:</p>
+      <ul>
+        <li>Relação de emprego (art. 3º da CLT)</li>
+        <li>Relação de representação comercial (Lei nº 4.886/65)</li>
+        <li>Sociedade de fato ou em conta de participação (arts. 991 a 996 do Código Civil)</li>
+        <li>Franquia (Lei nº 13.966/2019)</li>
+        <li>Agência ou distribuição (arts. 710 a 721 do Código Civil)</li>
+        <li>Contrato de comissão (arts. 693 a 709 do Código Civil)</li>
+      </ul>
+
+      <h3>2.7. Autonomia Comercial dos Usuários</h3>
+      <p>Cada Usuário mantém <strong>plena autonomia</strong> sobre:</p>
+      <ul>
+        <li>Definição de preços e condições comerciais</li>
+        <li>Escolha de parceiros comerciais</li>
+        <li>Aceitação ou rejeição de pedidos</li>
+        <li>Gestão de sua operação, logística e equipe</li>
+        <li>Cumprimento de suas obrigações fiscais e trabalhistas</li>
+      </ul>
+
+      <!-- Cláusula 3 -->
+      <h2>Cláusula 3ª — Cadastro e Conta do Usuário</h2>
+      <p><strong>3.1.</strong> Para utilizar os serviços da PLATAFORMA, o USUÁRIO deverá realizar cadastro fornecendo, no mínimo:</p>
+      <ul>
+        <li>Nome completo ou razão social</li>
+        <li>Endereço de e-mail válido</li>
+        <li>Senha de acesso (mínimo de 8 caracteres)</li>
+        <li>CPF (pessoa física) ou CNPJ (pessoa jurídica)</li>
+        <li>Tipo de Usuário (Produtor, Distribuidor ou Lojista)</li>
+        <li>Telefone de contato</li>
+      </ul>
+
+      <p><strong>3.2.</strong> O USUÁRIO declara e garante que todas as informações fornecidas no cadastro são <strong>verdadeiras, completas, atualizadas e precisas</strong>, responsabilizando-se civil e criminalmente pela veracidade dos dados informados.</p>
+
+      <p><strong>3.3.</strong> Cada pessoa física ou jurídica poderá manter <strong>apenas uma conta</strong> na Plataforma, vinculada a um único CPF ou CNPJ.</p>
+
+      <p><strong>3.4.</strong> O USUÁRIO é o <strong>único e exclusivo responsável</strong> pela guarda e sigilo de suas credenciais de acesso.</p>
+
+      <p><strong>3.5.</strong> O USUÁRIO se obriga a <strong>comunicar imediatamente</strong> a Plataforma sobre qualquer uso não autorizado de sua conta.</p>
+
+      <h3>3.6. Recusa, suspensão ou cancelamento de cadastro</h3>
+      <p>A PLATAFORMA reserva-se o direito de, a qualquer momento, <strong>recusar, suspender ou cancelar</strong> o cadastro de qualquer Usuário que:</p>
+      <ul>
+        <li>Forneça informações falsas, incompletas ou desatualizadas</li>
+        <li>Viole quaisquer disposições deste Contrato</li>
+        <li>Utilize a Plataforma para fins ilícitos</li>
+        <li>Possua restrições cadastrais que comprometam a segurança da Plataforma</li>
+        <li>Esteja envolvido em atividades que coloquem em risco a integridade da Plataforma ou de outros Usuários</li>
+      </ul>
+      <p><strong>3.7.</strong> Nessas hipóteses, a PLATAFORMA assegurará ao USUÁRIO o direito de <strong>defesa prévia</strong>, concedendo prazo de 5 (cinco) dias úteis para apresentação de justificativas, exceto em casos de urgência.</p>
+
+      <!-- Cláusula 4 -->
+      <h2>Cláusula 4ª — Obrigações do Usuário</h2>
+
+      <h3>4.1. Obrigações Gerais de Todos os Usuários</h3>
+      <p>O USUÁRIO se obriga a:</p>
+      <ul>
+        <li>Utilizar a Plataforma de forma ética, lícita e em conformidade com a legislação brasileira vigente</li>
+        <li>Manter seus dados cadastrais permanentemente atualizados</li>
+        <li>Responder pela veracidade de todo Conteúdo do Usuário publicado na Plataforma</li>
+        <li>Não utilizar a Plataforma para quaisquer finalidades ilícitas (lavagem de dinheiro, evasão fiscal, comercialização de produtos ilegais, fraude)</li>
+        <li>Não reproduzir, copiar ou explorar comercialmente qualquer conteúdo da Plataforma sem autorização</li>
+        <li>Não utilizar meios automatizados (bots, scripts, crawlers) para acessar ou extrair dados</li>
+        <li>Não tentar burlar ou comprometer a segurança da Plataforma</li>
+        <li>Não publicar conteúdo ofensivo, difamatório, discriminatório ou que incite violência</li>
+        <li>Honrar os compromissos comerciais assumidos com outros Usuários</li>
+        <li>Pagar pontualmente todas as Taxas da Plataforma</li>
+        <li>Manter backup próprio de suas informações e dados comerciais</li>
+      </ul>
+
+      <h3>4.2. Obrigações Específicas dos Produtores</h3>
+      <ul>
+        <li>Ofertar apenas produtos que possua efetiva capacidade de produção e entrega</li>
+        <li>Garantir que os produtos atendam às normas sanitárias vigentes (ANVISA, MAPA)</li>
+        <li>Informar corretamente as características dos produtos (variedade, origem, forma de cultivo, certificações)</li>
+        <li>Não anunciar produtos como "orgânicos" sem possuir certificação válida (Lei nº 10.831/2003)</li>
+        <li>Manter registros de rastreabilidade quando exigido pela legislação</li>
+        <li>Comunicar imediatamente problemas sanitários, recall ou contaminação</li>
+      </ul>
+
+      <h3>4.3. Obrigações Específicas dos Distribuidores</h3>
+      <ul>
+        <li>Possuir todas as licenças, alvarás e autorizações necessárias</li>
+        <li>Manter condições adequadas de armazenamento e transporte</li>
+        <li>Informar com veracidade as condições de seus produtos no catálogo</li>
+        <li>Gerenciar adequadamente seu estoque</li>
+        <li>Cumprir os prazos de entrega informados</li>
+        <li>Manter veículos e equipamentos em condições de higiene e segurança</li>
+      </ul>
+
+      <h3>4.4. Obrigações Específicas dos Lojistas</h3>
+      <ul>
+        <li>Possuir as licenças e alvarás necessárias para o exercício de sua atividade</li>
+        <li>Honrar os pedidos realizados e aprovados</li>
+        <li>Realizar os pagamentos dentro dos prazos acordados</li>
+        <li>Comunicar prontamente qualquer problema nos produtos recebidos</li>
+      </ul>
+
+      <!-- Cláusula 5 -->
+      <h2>Cláusula 5ª — Transações entre Usuários</h2>
+      <p><strong>5.1.</strong> As transações comerciais são celebradas <strong>direta e exclusivamente entre os Usuários envolvidos</strong>, sendo a PLATAFORMA mera intermediadora tecnológica.</p>
+
+      <div class="highlight">
+        <strong>5.2.</strong> A PLATAFORMA <strong>não garante, endossa ou se responsabiliza</strong> por: qualidade, segurança ou legalidade dos produtos; veracidade das informações; capacidade dos Usuários de cumprir obrigações; solvência financeira; entrega ou recebimento dos produtos; cumprimento de prazos; conformidade com normas sanitárias.
+      </div>
+
+      <p><strong>5.3.</strong> A PLATAFORMA <strong>não possui obrigação</strong> de verificar, inspecionar, testar ou certificar os produtos ofertados.</p>
+      <p><strong>5.4.</strong> Disputas devem ser resolvidas <strong>diretamente entre os Usuários</strong>. A PLATAFORMA poderá disponibilizar mecanismos de mediação sem assumir responsabilidade.</p>
+      <p><strong>5.5.</strong> O registro de Pedidos na Plataforma constitui <strong>prova da intenção comercial</strong> entre as partes (art. 225 do Código Civil e art. 441 do CPC).</p>
+
+      <!-- Cláusula 6 -->
+      <h2>Cláusula 6ª — Remuneração e Pagamentos</h2>
+      <p><strong>6.1.</strong> Pela utilização dos serviços de intermediação, o USUÁRIO pagará à PLATAFORMA a <strong>Taxa da Plataforma</strong>, correspondente a <strong>1% (um por cento)</strong> do valor bruto de cada Transação aprovada.</p>
+      <p><strong>6.2.</strong> A Taxa será calculada automaticamente no momento da aprovação do Pedido e consolidada em <strong>Faturas mensais</strong>, emitidas até o 5º dia útil do mês subsequente.</p>
+      <p><strong>6.3.</strong> O pagamento deverá ser realizado até o <strong>10º dia</strong> do mês subsequente, por meio de PIX ou boleto bancário.</p>
+
+      <h3>6.4. Inadimplência</h3>
+      <p>O atraso no pagamento sujeitará o USUÁRIO a:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Consequência</th>
+              <th>Condição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Multa moratória de 2%</td><td>Sobre o valor devido</td></tr>
+            <tr><td>Juros de mora de 1% ao mês</td><td>Calculados pro rata die</td></tr>
+            <tr><td>Correção monetária (IPCA/IBGE)</td><td>Sobre o valor devido</td></tr>
+            <tr><td>Inscrição em órgãos de proteção ao crédito</td><td>Após 30 dias de inadimplência</td></tr>
+            <tr><td>Suspensão do acesso</td><td>Após 15 dias de inadimplência</td></tr>
+            <tr><td>Cancelamento definitivo da conta</td><td>Após 90 dias de inadimplência</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>6.5.</strong> Os pagamentos entre Usuários referentes às Transações são de <strong>inteira responsabilidade dos próprios Usuários</strong>.</p>
+      <p><strong>6.6.</strong> A PLATAFORMA poderá conceder descontos na Taxa, inclusive pelo programa de indicações, podendo ser alterados mediante aviso prévio de 15 dias.</p>
+      <p><strong>6.7.</strong> O USUÁRIO poderá contestar Faturas no prazo de <strong>10 dias úteis</strong>. Faturas não contestadas serão consideradas aceitas.</p>
+      <p><strong>6.8.</strong> Em caso de erro comprovado, a PLATAFORMA emitirá Fatura corrigida em <strong>5 dias úteis</strong>.</p>
+
+      <!-- Cláusula 7 -->
+      <h2>Cláusula 7ª — Ferramentas Auxiliares</h2>
+
+      <h3>7.1. Ferramentas de Logística e Rotas</h3>
+      <p>Ferramentas de gestão logística são meros <strong>recursos auxiliares de apoio operacional</strong>. Os resultados (rotas, estimativas de tempo, cálculos de combustível) são <strong>indicativos e estimativos</strong>, não constituindo garantia de exatidão.</p>
+
+      <h3>7.2. Ferramentas de Comunicação</h3>
+      <p>O chat destina-se exclusivamente à comunicação relacionada às Transações. O USUÁRIO é o <strong>único responsável</strong> pelo conteúdo de suas mensagens. Mensagens são armazenadas por <strong>365 dias</strong> e podem ser utilizadas como evidência em processos de mediação.</p>
+
+      <h3>7.3. Sistema de Avaliações, Reputação e Selos</h3>
+      <p>As avaliações representam a <strong>opinião subjetiva</strong> do Usuário avaliador. Os níveis de reputação e selos são <strong>indicadores algorítmicos</strong> e <strong>NÃO CONSTITUEM</strong>:</p>
+      <ul>
+        <li>Certificação de qualidade de produtos</li>
+        <li>Garantia de idoneidade comercial ou financeira</li>
+        <li>Atestado de conformidade sanitária ou regulatória</li>
+        <li>Endosso, recomendação ou chancela da Plataforma</li>
+        <li>Garantia de cumprimento de obrigações futuras</li>
+      </ul>
+      <p>Selos concedidos pela administração podem ser <strong>revogados</strong> a qualquer tempo. Avaliações falsas ou manipuladas sujeitam o Usuário a suspensão ou banimento imediato.</p>
+
+      <h3>7.4. Relatórios e Métricas</h3>
+      <p>Relatórios, métricas, estimativas e projeções gerados pela Plataforma são <strong>meramente informativos</strong>. A Plataforma <strong>não garante</strong> a exatidão ou completude das informações e <strong>não se responsabiliza</strong> por decisões tomadas com base nessas informações.</p>
+      <div class="highlight">
+        Os Usuários devem <strong>consultar profissionais especializados</strong> (contadores, agrônomos, administradores) antes de tomar decisões significativas com base em informações da Plataforma. As informações geradas <strong>não substituem orientação profissional</strong>.
+      </div>
+
+      <!-- Cláusula 8 -->
+      <h2>Cláusula 8ª — Propriedade Intelectual</h2>
+      <p><strong>8.1.</strong> A PLATAFORMA é titular exclusiva de todos os direitos de propriedade intelectual sobre o Aplicativo, protegidos pela Lei nº 9.609/98, Lei nº 9.610/98 e Lei nº 9.279/96.</p>
+      <p><strong>8.2.</strong> Este Contrato <strong>não transfere</strong> ao Usuário qualquer direito de propriedade intelectual, concedendo apenas licença limitada, não exclusiva, intransferível e revogável de uso.</p>
+      <p><strong>8.3.</strong> Ao inserir Conteúdo do Usuário, o USUÁRIO concede à PLATAFORMA licença <strong>não exclusiva, gratuita, irrevogável, mundial e por prazo indeterminado</strong> para utilizar tal conteúdo no âmbito da operação da Plataforma.</p>
+      <p><strong>8.4.</strong> É expressamente <strong>proibido</strong> ao Usuário:</p>
+      <ul>
+        <li>Realizar engenharia reversa, descompilar ou desmontar o Aplicativo</li>
+        <li>Reproduzir, copiar ou distribuir qualquer parte do Aplicativo</li>
+        <li>Utilizar meios automatizados para extrair dados (scraping, crawling)</li>
+        <li>Criar obras derivadas baseadas no Aplicativo</li>
+        <li>Sublicenciar ou transferir os direitos concedidos neste Contrato</li>
+      </ul>
+
+      <!-- Cláusula 9 -->
+      <h2>Cláusula 9ª — Limitação de Responsabilidade</h2>
+      <p><strong>9.1.</strong> A PLATAFORMA <strong>não será responsável</strong>, em nenhuma hipótese, por:</p>
+      <ul>
+        <li>Atos, omissões ou condutas dos Usuários</li>
+        <li>Qualidade, segurança, legalidade ou conformidade sanitária dos produtos</li>
+        <li>Cumprimento ou descumprimento de obrigações comerciais entre Usuários</li>
+        <li>Inadimplência de qualquer Usuário perante outros</li>
+        <li>Atrasos, falhas ou perdas na entrega de produtos</li>
+        <li>Veracidade das informações fornecidas pelos Usuários</li>
+        <li>Danos causados por produtos defeituosos, contaminados ou impróprios</li>
+        <li>Problemas decorrentes de condições inadequadas de armazenamento ou transporte</li>
+        <li>Perdas resultantes de ações de terceiros (invasões, fraudes, ataques cibernéticos), desde que adotadas medidas razoáveis de segurança</li>
+        <li>Uso indevido das ferramentas auxiliares</li>
+        <li>Decisões tomadas com base em informações ou métricas geradas pela Plataforma</li>
+      </ul>
+
+      <div class="highlight">
+        <strong>9.2. Exclusão de Danos Indiretos:</strong> Em nenhuma circunstância a PLATAFORMA será responsável por danos indiretos, incidentais, especiais, consequenciais, punitivos, lucros cessantes, perda de receita, perda de dados ou perda de oportunidades comerciais. (Art. 402 e 403 do Código Civil)
+      </div>
+
+      <h3>9.3. Teto Indenizatório</h3>
+      <p>Se reconhecida judicialmente qualquer responsabilidade, a indenização total estará limitada ao <strong>maior</strong> entre:</p>
+      <ul>
+        <li>O valor total das Taxas pagas nos <strong>12 meses</strong> anteriores ao fato gerador; ou</li>
+        <li><strong>R$ 5.000,00</strong> (cinco mil reais)</li>
+      </ul>
+
+      <p><strong>9.4.</strong> A limitação <strong>não se aplica</strong> a: dolo ou má-fé; violação de dados pessoais por negligência grave (art. 42 da LGPD); situações vedadas por lei.</p>
+
+      <p><strong>9.5. Isenção por Força Maior:</strong> A PLATAFORMA não será responsável por falhas decorrentes de caso fortuito ou força maior (desastres naturais, pandemias, guerras, greves, falhas de infraestrutura de terceiros, atos governamentais).</p>
+
+      <!-- Cláusula 10 -->
+      <h2>Cláusula 10ª — Indenização pelo Usuário</h2>
+      <p>O USUÁRIO se obriga a <strong>indenizar, defender e manter indene</strong> a PLATAFORMA contra quaisquer perdas, danos, custos e despesas decorrentes de:</p>
+      <ul>
+        <li>Violação deste Contrato, dos Termos de Serviço ou da Política de Privacidade</li>
+        <li>Atos ilícitos praticados por meio da Plataforma</li>
+        <li>Violação de direitos de terceiros</li>
+        <li>Informações falsas ou desatualizadas</li>
+        <li>Produtos em desacordo com normas sanitárias ou regulatórias</li>
+        <li>Reclamações de terceiros (consumidores finais, órgãos reguladores, autoridades fiscais)</li>
+        <li>Obrigações fiscais e tributárias de responsabilidade do Usuário</li>
+        <li>Inadimplência perante outros Usuários ou perante a Plataforma</li>
+      </ul>
+
+      <!-- Cláusula 11 -->
+      <h2>Cláusula 11ª — Suspensão e Cancelamento</h2>
+
+      <h3>11.1. Suspensão Cautelar Imediata</h3>
+      <p>A PLATAFORMA poderá suspender imediatamente o acesso, <strong>sem aviso prévio</strong>, em caso de:</p>
+      <ul>
+        <li>Suspeita fundamentada de fraude ou atividade ilícita</li>
+        <li>Risco iminente à segurança da Plataforma ou de outros Usuários</li>
+        <li>Determinação judicial ou administrativa</li>
+        <li>Violação grave deste Contrato</li>
+        <li>Detecção de múltiplas contas</li>
+      </ul>
+      <p>O USUÁRIO será notificado em até <strong>48 horas</strong> e terá <strong>5 dias úteis</strong> para apresentar defesa.</p>
+
+      <h3>11.3. Suspensão por Inadimplência</h3>
+      <p>Suspensão automática após <strong>15 dias</strong> de atraso, restabelecida em até <strong>24 horas</strong> após regularização.</p>
+
+      <h3>11.4. Cancelamento Definitivo</h3>
+      <ul>
+        <li>Inadimplência superior a <strong>90 dias</strong></li>
+        <li>Confirmação de fraude após procedimento de defesa</li>
+        <li>Reincidência em violações após duas suspensões</li>
+        <li>Solicitação do próprio Usuário</li>
+      </ul>
+      <p><strong>11.5.</strong> O cancelamento não extingue obrigações financeiras pendentes.</p>
+      <p><strong>11.6.</strong> Na hipótese de cancelamento por solicitação do Usuário, a PLATAFORMA procederá à anonimização dos dados pessoais nos termos da Política de Privacidade.</p>
+
+      <!-- Cláusula 12 -->
+      <h2>Cláusula 12ª — Programa de Indicações</h2>
+      <p><strong>12.1.</strong> A PLATAFORMA poderá disponibilizar programa de indicações, mediante o qual Usuários podem convidar terceiros em troca de benefícios.</p>
+      <p><strong>12.2.</strong> Os benefícios serão definidos pela PLATAFORMA e poderão ser <strong>alterados, suspensos ou encerrados</strong> a qualquer tempo, mediante aviso prévio de <strong>15 dias</strong>.</p>
+      <p><strong>12.3.</strong> Benefícios obtidos mediante fraude ou manipulação serão cancelados.</p>
+      <p><strong>12.4.</strong> Benefícios já utilizados antes da alteração das regras serão preservados.</p>
+
+      <!-- Cláusula 13 -->
+      <h2>Cláusula 13ª — Comunidades e Conteúdo</h2>
+      <p><strong>13.1.</strong> As Comunidades são espaços de interação cujo conteúdo é gerado exclusivamente pelos Usuários.</p>
+      <p><strong>13.2.</strong> A PLATAFORMA <strong>não se responsabiliza</strong> pelo conteúdo publicado nas Comunidades.</p>
+      <p><strong>13.3.</strong> Informações obtidas nas Comunidades <strong>não substituem orientação profissional</strong>.</p>
+      <p><strong>13.4.</strong> A PLATAFORMA reserva-se o direito de <strong>remover conteúdo</strong> que viole este Contrato ou a legislação vigente.</p>
+      <p><strong>13.5.</strong> Configuram violação grave:</p>
+      <ul>
+        <li>Publicação de informações deliberadamente falsas</li>
+        <li>Promoção de produtos ou práticas ilegais</li>
+        <li>Assédio, discriminação ou ameaças a outros Usuários</li>
+        <li>Spam ou propaganda não autorizada</li>
+        <li>Violação de propriedade intelectual de terceiros</li>
+      </ul>
+
+      <!-- Cláusula 14 -->
+      <h2>Cláusula 14ª — Resolução de Disputas</h2>
+
+      <h3>14.1. Procedimento Escalonado</h3>
+      <p>Controvérsias serão resolvidas observando-se o seguinte procedimento:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Etapa</th>
+              <th>Mecanismo</th>
+              <th>Prazo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>1</strong></td><td>Negociação direta entre as partes</td><td>15 dias</td></tr>
+            <tr><td><strong>2</strong></td><td>Mediação por mediador mutuamente acordado</td><td>30 dias</td></tr>
+            <tr><td><strong>3</strong></td><td>Arbitragem (para disputas acima de R$ 50.000)</td><td>Conforme Lei nº 9.307/96</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>14.1.4.</strong> A cláusula arbitral <strong>não se aplica</strong> a: consumidores finais (art. 51, VII, CDC); medidas de urgência; demandas abaixo de R$ 50.000,00.</p>
+
+      <p><strong>14.2. Foro:</strong> Para questões não submetidas à arbitragem, fica eleito o foro da comarca da sede da empresa.</p>
+
+      <!-- Cláusula 15 -->
+      <h2>Cláusula 15ª — Disposições Gerais</h2>
+      <p><strong>15.1. Alterações:</strong> A PLATAFORMA poderá alterar este Contrato a qualquer tempo, mediante notificação com antecedência mínima de <strong>30 dias</strong> por notificação push, mensagem in-app ou e-mail.</p>
+      <p><strong>15.2.</strong> O uso continuado da Plataforma após 30 dias configurará <strong>aceitação tácita</strong>. O Usuário que não concordar poderá cancelar sua conta sem penalidade.</p>
+      <p><strong>15.3. Integralidade:</strong> Este Contrato, os Termos de Serviço e a Política de Privacidade constituem o <strong>acordo integral</strong> entre as partes.</p>
+      <p><strong>15.4. Independência das Cláusulas:</strong> A nulidade de qualquer cláusula não prejudicará as demais.</p>
+      <p><strong>15.5. Tolerância:</strong> A tolerância da PLATAFORMA não constituirá renúncia ou precedente.</p>
+      <p><strong>15.6. Cessão:</strong> O USUÁRIO não poderá ceder este Contrato sem autorização. A PLATAFORMA poderá ceder em caso de reorganização societária.</p>
+      <p><strong>15.7. Comunicações:</strong> Todas as comunicações serão por canais oficiais (chat, notificações, e-mail cadastrado).</p>
+      <p><strong>15.8. Lei Aplicável:</strong> Legislação da República Federativa do Brasil.</p>
+      <p><strong>15.9. Vigência:</strong> Este Contrato entra em vigor na data do cadastro e permanece vigente enquanto o Usuário mantiver conta ativa, sobrevivendo ao término as cláusulas 8ª, 9ª, 10ª e 14ª.</p>
+
+      <!-- Cláusula 16 -->
+      <h2>Cláusula 16ª — Declarações Finais do Usuário</h2>
+      <p>Ao aceitar este Contrato, o USUÁRIO declara que:</p>
+      <ul>
+        <li>Leu, compreendeu e concordou integralmente com todas as cláusulas</li>
+        <li>Possui capacidade civil plena para celebrar este Contrato</li>
+        <li>As informações fornecidas no cadastro são verdadeiras, completas e atualizadas</li>
+        <li>Compreende a natureza de intermediação da Plataforma</li>
+        <li>Está ciente de que a Plataforma não garante resultados comerciais, financeiros ou operacionais</li>
+        <li>Compreende e aceita as limitações de responsabilidade estabelecidas</li>
+      </ul>
+
+      <!-- Contato -->
+      <div class="contact-box">
+        <p>Dúvidas ou sugestões? Entre em contato:</p>
+        <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a>
+        <p style="margin-top: 16px; font-size: 13px;"><em>Este Contrato está disponível para consulta a qualquer tempo no Aplicativo,<br>na seção "Configurações > Documentos Legais".</em></p>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">FEIRA</div>
+      <nav class="footer-links">
+        <a href="termos-de-servico.html">Termos de Serviço</a>
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <a href="contrato-de-usuario.html" class="active">Contrato de Usuário</a>
+      </nav>
+      <div class="footer-email">
+        <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Feira — Mercado Agrícola. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

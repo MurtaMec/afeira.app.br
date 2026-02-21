@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Feira</title>
+  <meta name="description" content="Política de Privacidade da plataforma Feira — Em conformidade com a LGPD e o Marco Civil da Internet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f5f3e8;
+      color: #2d3436;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #ffffff;
+      border-bottom: 2px solid #4a6741;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo {
+      font-size: 18px;
+      font-weight: 900;
+      color: #4a6741;
+      letter-spacing: 4px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .header-logo:hover { opacity: 0.8; }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4a6741;
+      text-decoration: none;
+    }
+    .header-link:hover { text-decoration: underline; }
+    .btn-download {
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: #4a6741;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .btn-download:hover { opacity: 0.85; }
+
+    /* ── Content ── */
+    .content-wrapper {
+      flex: 1;
+      padding: 40px 24px 60px;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    @media (max-width: 600px) {
+      .content { padding: 32px 20px; }
+    }
+
+    /* ── Typography ── */
+    .doc-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #4a6741;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .doc-version {
+      font-size: 14px;
+      font-weight: 500;
+      color: #636e72;
+      margin-bottom: 8px;
+    }
+    .doc-compliance {
+      font-size: 14px;
+      font-weight: 500;
+      color: #636e72;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #2d3436;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f5f3e8;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2d3436;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 12px;
+      color: #2d3436;
+    }
+    ul, ol {
+      margin-bottom: 12px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    a { color: #4a6741; }
+    a:hover { text-decoration: underline; }
+    .highlight {
+      background: #f5f3e8;
+      border-left: 4px solid #4a6741;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-weight: 500;
+    }
+    .contact-box {
+      background: #f5f3e8;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .contact-box p { color: #636e72; margin-bottom: 8px; }
+    .contact-box a {
+      color: #4a6741;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Responsive table ── */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 480px;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid #e0e0e0;
+    }
+    th {
+      background: #4a6741;
+      color: #fff;
+      font-weight: 700;
+    }
+    td { background: #fff; }
+    tr:nth-child(even) td { background: #f9f9f9; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #2d3436;
+      color: #b2bec3;
+      padding: 40px 24px;
+      font-size: 14px;
+    }
+    .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 4px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+    }
+    .footer-links a {
+      color: #b2bec3;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #ffffff; }
+    .footer-links a.active {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .footer-email a {
+      color: #dfe6e9;
+      text-decoration: none;
+    }
+    .footer-email a:hover { text-decoration: underline; }
+    .footer-copy {
+      font-size: 12px;
+      color: #636e72;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">FEIRA</a>
+      <div class="header-actions">
+        <a href="index.html" class="header-link">Início</a>
+        <a href="https://play.google.com/store/apps/details?id=com.stallonemurta.market" target="_blank" rel="noopener" class="btn-download">Baixar App</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="content-wrapper">
+    <article class="content">
+
+      <h1 class="doc-title">Política de Privacidade da Plataforma Feira</h1>
+      <p class="doc-version">Versão 1.0 — 19 de fevereiro de 2026</p>
+      <p class="doc-compliance">Em conformidade com a LGPD (Lei 13.709/2018) e o Marco Civil da Internet (Lei 12.965/2014).</p>
+
+      <!-- 1 -->
+      <h2>1. Identificação do Controlador</h2>
+      <p>A plataforma <strong>FEIRA</strong> é a controladora dos dados pessoais tratados conforme esta Política.</p>
+      <p><strong>Contato do Encarregado (DPO):</strong> <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a></p>
+
+      <!-- 2 -->
+      <h2>2. Escopo</h2>
+      <p>Esta Política de Privacidade aplica-se a todos os serviços oferecidos pela Plataforma, incluindo:</p>
+      <ul>
+        <li>Aplicativo mobile (Android e iOS)</li>
+        <li>Páginas web associadas</li>
+        <li>Sistemas internos de gestão</li>
+      </ul>
+
+      <!-- 3 -->
+      <h2>3. Definições</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Termo</th>
+              <th>Definição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Dado Pessoal</strong></td><td>Informação relacionada a pessoa natural identificada ou identificável</td></tr>
+            <tr><td><strong>Titular</strong></td><td>Pessoa natural a quem se referem os dados pessoais</td></tr>
+            <tr><td><strong>Controlador</strong></td><td>Pessoa que toma as decisões referentes ao tratamento de dados pessoais</td></tr>
+            <tr><td><strong>Operador</strong></td><td>Pessoa que realiza o tratamento de dados pessoais em nome do controlador</td></tr>
+            <tr><td><strong>Tratamento</strong></td><td>Toda operação realizada com dados pessoais (coleta, uso, armazenamento, etc.)</td></tr>
+            <tr><td><strong>Anonimização</strong></td><td>Processo pelo qual um dado perde a possibilidade de associação a um indivíduo</td></tr>
+            <tr><td><strong>DPO</strong></td><td>Encarregado de Proteção de Dados</td></tr>
+            <tr><td><strong>ANPD</strong></td><td>Autoridade Nacional de Proteção de Dados</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 4 -->
+      <h2>4. Dados Coletados</h2>
+
+      <h3>4.1. Dados fornecidos diretamente pelo Usuário</h3>
+      <ul>
+        <li>Nome completo e razão social</li>
+        <li>Endereço de e-mail</li>
+        <li>Senha (armazenada com hash bcrypt)</li>
+        <li>CPF/CNPJ</li>
+        <li>Telefone</li>
+        <li>Endereço e localização</li>
+        <li>Chave PIX</li>
+        <li>Perfil profissional (tipo de atividade, produtos, certificações)</li>
+        <li>Imagens (foto de perfil, produtos, documentos)</li>
+        <li>Mensagens enviadas via chat</li>
+      </ul>
+
+      <h3>4.2. Dados coletados automaticamente</h3>
+      <ul>
+        <li>Geolocalização (com consentimento)</li>
+        <li>Informações do dispositivo (modelo, sistema operacional, versão do app)</li>
+        <li>Dados de uso do aplicativo (páginas acessadas, funcionalidades utilizadas)</li>
+        <li>Histórico de transações e pedidos</li>
+        <li>Interações com outros usuários (avaliações, indicações)</li>
+      </ul>
+
+      <h3>4.3. Dados sensíveis</h3>
+      <div class="highlight">
+        Dados biométricos, quando utilizados para autenticação, são <strong>processados localmente no dispositivo</strong> do Usuário e <strong>NUNCA são coletados ou armazenados</strong> pela Plataforma.
+      </div>
+
+      <h3>4.4. Menores de idade</h3>
+      <p>A Plataforma <strong>não é destinada a menores de 18 anos</strong>. Não coletamos intencionalmente dados de menores.</p>
+
+      <!-- 5 -->
+      <h2>5. Finalidades do Tratamento</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Base Legal</th>
+              <th>Finalidades</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Execução contratual</strong></td>
+              <td>Criação de conta, processamento de pedidos, comunicação entre usuários, faturamento, geração de relatórios</td>
+            </tr>
+            <tr>
+              <td><strong>Interesse legítimo</strong></td>
+              <td>Prevenção a fraudes, melhoria dos serviços, análises estatísticas, segurança da plataforma</td>
+            </tr>
+            <tr>
+              <td><strong>Obrigação legal</strong></td>
+              <td>Cumprimento de obrigações fiscais, cooperação com autoridades, retenção de registros conforme Marco Civil da Internet</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 6 -->
+      <h2>6. Compartilhamento de Dados</h2>
+
+      <h3>6.1. Com outros Usuários</h3>
+      <p>Dados de perfil público (nome, tipo, localização, produtos, avaliações) são compartilhados com outros usuários da Plataforma para viabilizar as transações comerciais.</p>
+
+      <h3>6.2. Com Operadores (prestadores de serviço)</h3>
+      <ul>
+        <li><strong>Supabase</strong> — infraestrutura e banco de dados</li>
+        <li><strong>Expo</strong> — notificações push e distribuição do app</li>
+        <li><strong>Sentry</strong> — monitoramento de erros</li>
+        <li><strong>Google / Apple</strong> — autenticação social</li>
+      </ul>
+
+      <h3>6.3. Com autoridades</h3>
+      <p>Mediante ordem judicial ou requisição legal fundamentada.</p>
+
+      <div class="highlight">
+        <strong>NUNCA vendemos dados pessoais.</strong> O compartilhamento é restrito ao estritamente necessário para a prestação dos serviços.
+      </div>
+
+      <!-- 7 -->
+      <h2>7. Segurança dos Dados</h2>
+      <p>Adotamos medidas técnicas e organizacionais para proteger os dados pessoais:</p>
+      <ul>
+        <li><strong>Criptografia AES-256</strong> para dados sensíveis em repouso</li>
+        <li><strong>HTTPS/TLS</strong> para dados em trânsito</li>
+        <li><strong>Bcrypt</strong> para hash de senhas</li>
+        <li><strong>Row Level Security (RLS)</strong> no banco de dados</li>
+        <li><strong>SECURITY DEFINER</strong> para funções com acesso controlado</li>
+        <li><strong>Auditoria</strong> e logs de acesso</li>
+        <li><strong>Sentry</strong> para monitoramento de incidentes</li>
+      </ul>
+
+      <!-- 8 -->
+      <h2>8. Retenção de Dados</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de Dado</th>
+              <th>Período de Retenção</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Dados cadastrais</td><td>Conta ativa + 5 anos após exclusão</td></tr>
+            <tr><td>Dados financeiros</td><td>5 anos (obrigação fiscal)</td></tr>
+            <tr><td>Logs de acesso</td><td>6 meses (Marco Civil da Internet)</td></tr>
+            <tr><td>Mensagens de chat</td><td>365 dias</td></tr>
+            <tr><td>Notificações</td><td>90 dias</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 9 -->
+      <h2>9. Direitos do Titular</h2>
+      <p>Nos termos da LGPD, o Titular dos dados tem direito a:</p>
+      <ul>
+        <li><strong>Confirmação</strong> da existência de tratamento</li>
+        <li><strong>Acesso</strong> aos dados pessoais</li>
+        <li><strong>Correção</strong> de dados incompletos, inexatos ou desatualizados</li>
+        <li><strong>Anonimização, bloqueio ou eliminação</strong> de dados desnecessários ou excessivos</li>
+        <li><strong>Portabilidade</strong> dos dados a outro fornecedor</li>
+        <li><strong>Eliminação</strong> dos dados tratados com consentimento</li>
+        <li><strong>Informação</strong> sobre compartilhamento com terceiros</li>
+        <li><strong>Revogação</strong> do consentimento</li>
+        <li><strong>Revisão</strong> de decisões automatizadas</li>
+        <li><strong>Oposição</strong> ao tratamento em caso de descumprimento da LGPD</li>
+      </ul>
+      <p><strong>Prazo de resposta:</strong> até 15 (quinze) dias úteis.</p>
+      <p><strong>Canal de atendimento:</strong> <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a></p>
+
+      <!-- 10 -->
+      <h2>10. Cookies e Tecnologias Similares</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Finalidade</th>
+              <th>Obrigatório</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Essenciais</td><td>Funcionamento básico da plataforma, autenticação</td><td>Sim</td></tr>
+            <tr><td>Funcionalidade</td><td>Preferências do usuário, personalização</td><td>Não</td></tr>
+            <tr><td>Analíticos</td><td>Estatísticas de uso, melhoria dos serviços</td><td>Não</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 11 -->
+      <h2>11. Incidentes de Segurança</h2>
+      <p>Em caso de incidente de segurança que possa acarretar risco ou dano relevante aos Titulares, a Plataforma comunicará:</p>
+      <ul>
+        <li>A <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> em até <strong>72 horas</strong></li>
+        <li>Os <strong>Titulares afetados</strong>, com descrição da natureza dos dados, riscos e medidas adotadas</li>
+      </ul>
+
+      <!-- 12 -->
+      <h2>12. Decisões Automatizadas</h2>
+      <p>A Plataforma utiliza processos automatizados para:</p>
+      <ul>
+        <li><strong>Cálculo de reputação</strong> — baseado em avaliações e histórico</li>
+        <li><strong>Atribuição de selos</strong> — verificação de identidade e qualidade</li>
+        <li><strong>Cálculo de taxa</strong> — percentual sobre transações</li>
+        <li><strong>Otimização de rotas</strong> — cálculo de distâncias e logística</li>
+        <li><strong>Detecção de atividade suspeita</strong> — prevenção a fraudes</li>
+      </ul>
+      <p>O Titular pode solicitar a <strong>revisão de qualquer decisão automatizada</strong> por uma pessoa natural, no prazo de <strong>15 (quinze) dias</strong>.</p>
+
+      <!-- 13 -->
+      <h2>13. Alterações nesta Política</h2>
+      <p>A Plataforma poderá atualizar esta Política de Privacidade a qualquer momento. Alterações substanciais serão comunicadas com pelo menos <strong>30 (trinta) dias</strong> de antecedência por meio dos canais oficiais.</p>
+
+      <!-- 14 -->
+      <h2>14. Contato e Reclamações</h2>
+      <div class="contact-box">
+        <p><strong>Encarregado de Proteção de Dados (DPO)</strong></p>
+        <p>E-mail: <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a></p>
+        <p style="margin-top: 16px; font-size: 13px;">Caso não obtenha resposta satisfatória, o Titular pode recorrer à<br><strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>:<br><a href="https://www.gov.br/anpd" target="_blank" rel="noopener">www.gov.br/anpd</a></p>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">FEIRA</div>
+      <nav class="footer-links">
+        <a href="termos-de-servico.html">Termos de Serviço</a>
+        <a href="politica-de-privacidade.html" class="active">Política de Privacidade</a>
+        <a href="contrato-de-usuario.html">Contrato de Usuário</a>
+      </nav>
+      <div class="footer-email">
+        <a href="mailto:feiraappsuporte@gmail.com">feiraappsuporte@gmail.com</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Feira — Mercado Agrícola. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

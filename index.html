@@ -195,6 +195,22 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
 
+    .btn-soon {
+      background-color: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.35);
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.85;
+    }
+    .btn-soon-dark {
+      background-color: rgba(74, 103, 65, 0.12);
+      color: var(--color-primary);
+      border-color: rgba(74, 103, 65, 0.3);
+      cursor: default;
+      pointer-events: none;
+    }
+
     /* ========================================
        Header
        ======================================== */
@@ -1093,11 +1109,9 @@
         <a href="#contato">Contato</a>
       </nav>
 
-      <a href="https://web.afeira.app.br"
-         target="_blank" rel="noopener"
-         class="btn btn-primary header-cta header-cta-desktop">
-        Acessar Web
-      </a>
+      <span class="btn btn-soon-dark header-cta header-cta-desktop" aria-disabled="true">
+        Web em breve
+      </span>
 
       <button class="hamburger" id="hamburger" aria-label="Abrir menu">
         <span></span>
@@ -1116,11 +1130,9 @@
     <a href="#tutoriais">Tutoriais</a>
     <a href="#faq">FAQ</a>
     <a href="#contato">Contato</a>
-    <a href="https://web.afeira.app.br"
-       target="_blank" rel="noopener"
-       class="btn btn-primary mobile-cta">
-      Acessar Web
-    </a>
+    <span class="btn btn-soon-dark mobile-cta" aria-disabled="true">
+      Web em breve
+    </span>
   </nav>
 
   <!-- ======== HERO ======== -->
@@ -1132,12 +1144,8 @@
         <p class="fade-in">Feira é a plataforma que une produtores rurais, distribuidoras e lojistas em um mercado agrícola digital. Tudo em um só app.</p>
         <p class="fade-in" style="background-color: rgba(255,255,255,0.15); display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 0.95rem; color: #ffffff; font-weight: 600; margin-bottom: 8px;">Aplicativo em breve na Google Play e App Store</p>
         <div class="hero-buttons fade-in">
-          <a href="https://web.afeira.app.br"
-             target="_blank" rel="noopener"
-             class="btn btn-primary">
-            Acessar Versão Web
-          </a>
-          <a href="#como-funciona" class="btn btn-outline">Saiba mais</a>
+          <a href="#como-funciona" class="btn btn-primary">Saiba mais</a>
+          <span class="btn btn-soon" aria-disabled="true">Versão web em breve</span>
         </div>
       </div>
     </div>
@@ -1860,7 +1868,7 @@
         <details>
           <summary>Existe versão para iPhone ou computador?</summary>
           <div class="details-content">
-            <p>A versão web do Feira já está disponível em <a href="https://web.afeira.app.br" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">web.afeira.app.br</a> e pode ser acessada de qualquer navegador, no computador ou celular. O aplicativo para Android (Google Play) e iOS (App Store) será lançado em breve.</p>
+            <p>Estamos finalizando a versão web do Feira, que poderá ser acessada de qualquer navegador, no computador ou celular. O aplicativo para Android (Google Play) e iOS (App Store) e a versão web serão lançados em breve.</p>
           </div>
         </details>
 
@@ -1919,12 +1927,8 @@
       <h2 class="fade-in">Pronto para transformar seu negócio agrícola?</h2>
       <p class="fade-in">Junte-se a produtores, distribuidoras e lojistas que já estão conectados pelo Feira.</p>
       <div class="fade-in">
-        <a href="https://web.afeira.app.br"
-           target="_blank" rel="noopener"
-           class="btn btn-white">
-          Acessar Versão Web
-        </a>
-        <p class="small-text">Aplicativo em breve na Google Play e App Store.</p>
+        <span class="btn btn-soon" aria-disabled="true">Versão web em breve</span>
+        <p class="small-text">Aplicativo em breve na Google Play, App Store e navegador.</p>
       </div>
     </div>
   </section>

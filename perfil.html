@@ -193,14 +193,14 @@
       var id = params.get('id');
 
       var tipos = { a: 'agricultor', e: 'empresa', v: 'vendedor' };
-      var tipoLabels = { a: 'Agricultor', e: 'Empresa', v: 'Vendedor' };
+      var tipoLabels = { a: 'Produtor', e: 'Distribuidor', v: 'Lojista' };
       var tipoEmojis = { a: '\uD83C\uDF31', e: '\uD83C\uDFE2', v: '\uD83D\uDED2' };
 
       var tipo = tipos[t];
 
       if (tipo && id) {
         // Tentar abrir o app via custom scheme
-        var deepLink = 'market://perfil/' + tipo + '/' + id;
+        var deepLink = 'feira://perfil/' + tipo + '/' + id;
         window.location.href = deepLink;
 
         // Mostrar tipo no badge
